@@ -4,12 +4,12 @@ import { structureTool } from 'sanity/structure'
 import defaultDocumentNode from './src/defaultDocumentNode'
 import structure from './src/structure'
 import { presentationTool } from 'sanity/presentation'
-import {
-	dashboardTool,
-	projectInfoWidget,
-	projectUsersWidget,
-} from '@sanity/dashboard'
-import { vercelWidget } from 'sanity-plugin-dashboard-widget-vercel'
+// import {
+// 	dashboardTool,
+// 	projectInfoWidget,
+// 	projectUsersWidget,
+// } from '@sanity/dashboard'
+// import { vercelWidget } from 'sanity-plugin-dashboard-widget-vercel'
 import { visionTool } from '@sanity/vision'
 import { codeInput } from '@sanity/code-input'
 import { schemaTypes } from './schemas'
@@ -37,10 +37,10 @@ export default defineConfig({
 				},
 			},
 		}),
-		dashboardTool({
-			title: 'Deployment',
-			widgets: [projectInfoWidget(), projectUsersWidget(), vercelWidget()],
-		}),
+		// dashboardTool({
+		// 	title: 'Deployment',
+		// 	widgets: [projectInfoWidget(), projectUsersWidget()],
+		// }),
 		visionTool({
 			title: 'GROQ',
 		}),
