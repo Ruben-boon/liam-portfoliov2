@@ -1,0 +1,16 @@
+* {
+	cursor: none !important;
+}
+
+/* Create a custom cursor */
+.custom-cursor {
+	width: 18px;
+	height: 18px;
+	background-color: white;
+	border-radius: 50%;
+	position: fixed;
+	pointer-events: none;
+	z-index: 9999;
+	transition: transform 0.1s ease;
+	mix-blend-mode: difference;
+}

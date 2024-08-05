@@ -38,12 +38,12 @@ export default function List({
 	}
 
 	return (
-		<ul {...props}>
+		<div className="grid w-full grid-cols-1 md:grid-cols-2">
 			{filtered?.map((post) => (
-				<li className="anim-fade" key={post._id}>
+				<div key={post._id}>
 					<PostPreview post={post} />
-				</li>
+				</div>
 			))}
-		</ul>
+		</div>
 	)
 }

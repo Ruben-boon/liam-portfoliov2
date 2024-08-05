@@ -30,24 +30,11 @@ export default async function BlogList({
 	)
 
 	return (
-		<section className="section space-y-8">
-			{intro && (
-				<header className="richtext">
-					<PortableText value={intro} />
-				</header>
-			)}
-
-			{displayFilters && <Filtering predefinedFilters={predefinedFilters} />}
-
+		<section className="section w-full space-y-8">
 			<List
 				posts={posts}
 				predefinedFilters={predefinedFilters}
-				className={cn(
-					'gap-x-6 gap-y-12',
-					stegaClean(layout) === 'grid'
-						? 'grid md:grid-cols-[repeat(auto-fill,minmax(300px,1fr))]'
-						: 'carousel max-xl:full-bleed md:overflow-fade-r pb-4 [--size:320px] max-xl:px-4',
-				)}
+				className={cn('gap-x-6 gap-y-12')}
 			/>
 		</section>
 	)

@@ -106,6 +106,7 @@ declare global {
 			internal?: Page | BlogPost
 			external?: string
 			params?: string
+			content?: any
 		}
 
 		type LinkList = {

@@ -26,6 +26,7 @@
 		"sanity": "^3.46.1",
 		"sanity-plugin-dashboard-widget-vercel": "^2.0.1",
 		"sanity-plugin-iframe-pane": "^3.1.6",
+		"sass": "^1.77.8",
 		"styled-components": "^6.1.11"
 	},
 	"devDependencies": {

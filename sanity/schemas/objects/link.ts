@@ -11,10 +11,6 @@ export default defineType({
 	},
 	fields: [
 		defineField({
-			name: 'label',
-			type: 'string',
-		}),
-		defineField({
 			name: 'type',
 			type: 'string',
 			options: {
@@ -26,11 +22,16 @@ export default defineType({
 			},
 		}),
 		defineField({
+			name: 'label',
+			type: 'string',
+		}),
+		defineField({
 			name: 'internal',
 			type: 'reference',
 			to: [{ type: 'page' }, { type: 'blog.post' }],
 			hidden: ({ parent }) => parent?.type !== 'internal',
 		}),
+
 		defineField({
 			name: 'external',
 			type: 'url',
@@ -46,6 +47,11 @@ export default defineType({
 			title: 'URL params',
 			type: 'string',
 			hidden: ({ parent }) => parent?.type !== 'internal',
+		}),
+		defineField({
+			name: 'content',
+			type: 'array',
+			of: [{ type: 'block' }],
 		}),
 	],
 	preview: {

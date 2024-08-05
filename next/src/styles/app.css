@@ -1,4 +1,5 @@
 @import './fonts.css';
+@import './cursor.css';
 
 @tailwind base;
 @tailwind components;
@@ -19,7 +20,6 @@
 	}
 
 	@keyframes target {
-
 		0%,
 		50% {
 			@apply bg-amber-400/50;
@@ -130,7 +130,7 @@
 	/* layout */
 
 	.section {
-		@apply mx-auto max-w-screen-xl p-8 max-md:px-4 md:py-12;
+		@apply mx-auto max-w-screen-xl;
 	}
 
 	/* richtext */
@@ -179,7 +179,7 @@
 			}
 		}
 
-		& :not(pre)>code {
+		& :not(pre) > code {
 			@apply rounded bg-ink/5 px-1;
 		}
 
@@ -221,7 +221,7 @@
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
 
-		&>* {
+		& > * {
 			flex: 0 0 min(var(--size, 300px), 80vw);
 			scroll-snap-align: center;
 		}
@@ -249,19 +249,23 @@
 
 	.overflow-fade {
 		--offset: 4rem;
-		mask: linear-gradient(to right,
-				transparent,
-				black var(--offset),
-				black calc(100% - var(--offset)),
-				transparent);
+		mask: linear-gradient(
+			to right,
+			transparent,
+			black var(--offset),
+			black calc(100% - var(--offset)),
+			transparent
+		);
 	}
 
 	.overflow-fade-r {
 		--offset: 4rem;
-		mask: linear-gradient(to right,
-				black 50%,
-				black calc(100% - var(--offset)),
-				transparent);
+		mask: linear-gradient(
+			to right,
+			black 50%,
+			black calc(100% - var(--offset)),
+			transparent
+		);
 	}
 
 	.sticky-below-header {
