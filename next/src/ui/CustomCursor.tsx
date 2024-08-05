@@ -1,11 +1,16 @@
 'use client'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
+
+interface CursorPosition {
+	x: number
+	y: number
+}
 
 export default function CustomCursor() {
-	const [position, setPosition] = useState({ x: 0, y: 0 })
+	const [position, setPosition] = useState<CursorPosition>({ x: 0, y: 0 })
 
 	useEffect(() => {
-		const updatePosition = (e) => {
+		const updatePosition = (e: MouseEvent) => {
 			setPosition({ x: e.clientX, y: e.clientY })
 		}
 

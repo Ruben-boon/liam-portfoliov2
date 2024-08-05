@@ -1,18 +1,26 @@
-// Image3D.tsx
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
 import Img from '@/ui/Img'
 
-const Image3D = ({ image }) => {
-	const figureRef = useRef(null)
-	const [rotation, setRotation] = useState({ x: 0, y: 0 })
+interface Image3DProps {
+	image: Sanity.Image
+}
+
+interface Rotation {
+	x: number
+	y: number
+}
+
+const Image3D: React.FC<Image3DProps> = ({ image }) => {
+	const figureRef = useRef<HTMLElement>(null)
+	const [rotation, setRotation] = useState<Rotation>({ x: 0, y: 0 })
 
 	useEffect(() => {
-		const handleMouseMove = (e) => {
+		const handleMouseMove = (e: MouseEvent) => {
 			if (!figureRef.current) return
-			const { left, top, width, height } =
-				figureRef.current.getBoundingClientRect()
+			const figure = figureRef.current as HTMLElement
+			const { left, top, width, height } = figure.getBoundingClientRect()
 			const x = (e.clientX - left) / width
 			const y = (e.clientY - top) / height
 			setRotation({

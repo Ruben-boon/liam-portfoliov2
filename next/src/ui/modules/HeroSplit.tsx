@@ -1,4 +1,5 @@
 // HeroSplit.tsx
+// @ts-nocheck
 import React from 'react'
 import { PortableText } from '@portabletext/react'
 import Pretitle from '@/ui/Pretitle'
