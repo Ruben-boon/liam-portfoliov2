@@ -17,16 +17,19 @@
 	"dependencies": {
 		"@sanity/code-input": "^4.1.4",
 		"@sanity/dashboard": "^3.1.6",
+		"@sanity/ui": "^2.8.8",
 		"@sanity/vision": "^3.46.1",
 		"dotenv": "^16.4.5",
+		"next-sanity": "^9.4.4",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-icons": "^5.2.1",
 		"react-is": "^18.3.1",
 		"sanity": "^3.46.1",
+		"sanity-plugin-dashboard-widget-vercel": "^2.0.1",
 		"sanity-plugin-iframe-pane": "^3.1.6",
 		"sass": "^1.77.8",
-		"styled-components": "^5.2.3"
+		"styled-components": "^5.3.11"
 	},
 	"devDependencies": {
 		"@sanity/eslint-config-studio": "^4.0.0",
