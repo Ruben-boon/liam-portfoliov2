@@ -12,18 +12,17 @@ export default function StepList({
 	return (
 		<section className="section space-y-8">
 			{intro && (
-				<header className="richtext text-center">
+				<header className="section richtext space-y-6 pb-5 pt-20 text-center">
 					<PortableText value={intro} />
 				</header>
 			)}
 
-			<ol className="grid gap-8 md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
+			<ol className="section flex flex-col items-center gap-8">
 				{steps?.map((step, index) => (
-					<li className="grid grid-cols-[auto,1fr] gap-2" key={index}>
-						<b className="text-gradient aspect-square h-[1em] -translate-y-4 text-center text-6xl tabular-nums">
-							{index + 1}
-						</b>
-
+					<li
+						className="flex max-w-screen-md flex-col items-start text-center"
+						key={index}
+					>
 						<div className="richtext">
 							<PortableText value={step.content} />
 						</div>

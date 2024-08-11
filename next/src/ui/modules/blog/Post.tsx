@@ -10,6 +10,7 @@ import css from './Post.module.css'
 import Img from '@/ui/Img'
 
 export default async function Post({ post }: { post: Sanity.BlogPost }) {
+	console.log(post)
 	return (
 		<>
 			<article>
@@ -24,9 +25,10 @@ export default async function Post({ post }: { post: Sanity.BlogPost }) {
 					>
 						<hr />
 					</Content>
-					<Img image={post.metadata.ogimage}></Img>
 				</div>
-				<div></div>
+				<div className="p-4">
+					<Img image={post.metadata.image} />
+				</div>
 			</article>
 		</>
 	)

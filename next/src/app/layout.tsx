@@ -9,6 +9,7 @@ import { VisualEditing } from 'next-sanity'
 import { Analytics } from '@vercel/analytics/react'
 import '@/styles/app.css'
 import CustomCursor from '@/ui/CustomCursor'
+import PageTransition from './PageTransition'
 
 export const metadata: Metadata = {
 	icons: {
@@ -31,6 +32,8 @@ export default async function RootLayout({
 					{/* <SkipToContent /> */}
 					{/* <Announcement /> */}
 					<main id="main-content" tabIndex={-1} className="md:w-[69%]">
+						{/* <PageTransition>{children}</PageTransition>
+						 */}
 						{children}
 					</main>
 					<Header />
