@@ -7,19 +7,13 @@ import Content from '../RichtextModule/Content'
 import Breadcrumbs from '../Breadcrumbs'
 import { cn } from '@/lib/utils'
 import css from './Post.module.css'
+import Img from '@/ui/Img'
 
 export default async function Post({ post }: { post: Sanity.BlogPost }) {
-	const crumbs = await fetchSanity<Sanity.Page[]>(
-		groq`*[_type == 'page' && metadata.slug.current in ['index', 'blog']]{
-			title,
-			metadata
-		}`,
-	)
-
 	return (
 		<>
 			<article>
-				<header className="section space-y-6 text-center">
+				<header className="section space-y-6 pb-5 pt-20 text-center">
 					<h1 className="h1 text-balance">{post.metadata.title}</h1>
 				</header>
 
@@ -30,18 +24,10 @@ export default async function Post({ post }: { post: Sanity.BlogPost }) {
 					>
 						<hr />
 					</Content>
+					<Img image={post.metadata.ogimage}></Img>
 				</div>
+				<div></div>
 			</article>
-
-			<Breadcrumbs
-				crumbs={
-					crumbs?.map((crumb) => ({
-						type: 'internal',
-						internal: crumb,
-					})) as Omit<Sanity.Link[], '_type' | 'label'>
-				}
-				currentPage={post}
-			/>
 		</>
 	)
 }

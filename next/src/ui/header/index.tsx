@@ -43,19 +43,21 @@ export default async function Header() {
 				</div>
 
 				<div className="navigation flex flex-col gap-6">
-					{headerMenu?.items?.map((item, key) => (
-						<div className="link-list flex flex-col" key={key}>
-							{item._type === 'link' && (
-								<>
-									<CTA
-										className="hover:link pb-4 text-xl font-bold"
-										link={item}
-									/>
+					{headerMenu?.items?.map(
+						(item, key) =>
+							item._type === 'link' && (
+								<CTA
+									link={item}
+									className="link-list flex flex-col rounded-md p-4 pl-0 pr-8 transition-all duration-300 ease-in-out hover:bg-neutral-100 hover:pl-4 hover:pr-4"
+									key={key}
+								>
+									<div className="pb-4 text-2xl font-bold">
+										{item.label} {/* Assuming the title is in `item.title` */}
+									</div>
 									<PortableText value={item.content} />
-								</>
-							)}
-						</div>
-					))}
+								</CTA>
+							),
+					)}
 				</div>
 
 				<Toggle />

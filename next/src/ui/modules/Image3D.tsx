@@ -36,7 +36,7 @@ const Image3D: React.FC<Image3DProps> = ({ image }) => {
 	return (
 		<figure
 			ref={figureRef}
-			className="perspective h-full w-full overflow-hidden bg-black md:max-h-full"
+			className="perspective h-full w-full overflow-hidden bg-white md:max-h-full"
 			style={{
 				perspective: '1000px',
 				transformStyle: 'preserve-3d',

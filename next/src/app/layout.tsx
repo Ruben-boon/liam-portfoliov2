@@ -23,9 +23,6 @@ export default async function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<head>
-				<link rel="stylesheet" href="https://use.typekit.net/ipa5yny.css" />
-			</head>
 			{/* <GoogleTagManager gtmId='' /> */}
 
 			<body className="flex bg-white text-ink">
