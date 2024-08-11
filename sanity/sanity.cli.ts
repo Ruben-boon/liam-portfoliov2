@@ -3,7 +3,7 @@ import { projectId } from './src/env'
 
 export default defineCliConfig({
 	api: {
-		projectId,
+		projectId: process.env.SANITY_PROJECT_ID,
 		dataset: 'production',
 	},
 })
