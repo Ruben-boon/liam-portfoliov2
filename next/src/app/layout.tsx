@@ -9,7 +9,7 @@ import { VisualEditing } from 'next-sanity'
 import { Analytics } from '@vercel/analytics/react'
 import '@/styles/app.css'
 import CustomCursor from '@/ui/CustomCursor'
-import PageTransition from './PageTransition'
+import Toggle from '@/ui/header/Toggle'
 
 export const metadata: Metadata = {
 	icons: {
@@ -28,7 +28,7 @@ export default async function RootLayout({
 
 			<body className="flex bg-white text-ink">
 				<CustomCursor />
-				<div className="flex w-full">
+				<div className="flex w-full flex-col lg:flex-row">
 					{/* <SkipToContent /> */}
 					{/* <Announcement /> */}
 					<main id="main-content" tabIndex={-1} className="md:w-[69%]">
@@ -36,8 +36,21 @@ export default async function RootLayout({
 						 */}
 						{children}
 					</main>
-					<Header />
-
+					{/* <Image
+						src="/burger.svg"
+						alt="Burger Menu Icon"
+						width={50}
+						height={50}
+						className="fixed right-8 top-8 z-50 h-8 lg:hidden"
+					/>
+					<Image
+						src="/cross.svg"
+						alt="Burger Menu Icon"
+						width={50}
+						height={50}
+						className="fixed right-8 top-8 z-50 h-8 lg:hidden"
+					/> */}
+					{/* <Header /> */}
 					{/* <Footer /> */}
 					<Analytics />
 					{draftMode().isEnabled && <VisualEditing />}
