@@ -25,7 +25,7 @@ export default async function HeroSplit({
 	const logoImage = logo?.image?.dark || logo?.image?.default
 
 	return (
-		<section className="section flex flex-col md:h-screen md:flex-row md:items-stretch md:gap-x-12">
+		<section className="section flex h-screen flex-col md:flex-row md:items-stretch md:gap-x-12">
 			<Image3D image={image} />
 
 			{/* <div

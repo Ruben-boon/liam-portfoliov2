@@ -50,7 +50,7 @@ export default async function RootLayout({
 						height={50}
 						className="fixed right-8 top-8 z-50 h-8 lg:hidden"
 					/> */}
-					{/* <Header /> */}
+					<Header />
 					{/* <Footer /> */}
 					<Analytics />
 					{draftMode().isEnabled && <VisualEditing />}

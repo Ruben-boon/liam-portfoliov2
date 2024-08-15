@@ -45,6 +45,7 @@ declare global {
 			readonly _type: 'blog.post'
 			body: any
 			readTime: number
+			image: Image
 			headings?: { style: string; text: string }[]
 			categories: BlogCategory[]
 			publishDate: string

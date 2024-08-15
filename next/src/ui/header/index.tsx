@@ -3,7 +3,6 @@ import Wrapper from './Wrapper'
 import Link from 'next/link'
 import Img from '../Img'
 // import CTAList from '@/ui/CTAList'
-import Toggle from './Toggle'
 import { cn } from '@/lib/utils'
 import css from './Header.module.css'
 import { PortableText } from 'next-sanity'
@@ -15,14 +14,14 @@ export default async function Header() {
 	const logoImage = logo?.image?.dark || logo?.image?.default
 
 	return (
-		<Wrapper className="fixed top-0 z-10 h-[100vh] w-full bg-canvas header-closed:hidden max-md:header-open:shadow-lg md:w-[30%] lg:sticky">
+		<Wrapper className="fixed bottom-0 z-10 h-fit w-full bg-canvas header-closed:hidden max-md:header-open:shadow-lg md:top-0 md:h-screen md:w-[30%] lg:sticky">
 			<div
 				className={cn(
 					css.header,
-					'flex h-full flex-col justify-center gap-10 p-10', // Adjust the number of columns as needed
+					'flex h-full flex-col justify-between p-8', // Adjust the number of columns as needed
 				)}
 			>
-				<div className="[grid-area:logo]">
+				<div className="z- fixed right-4 top-2 justify-end md:relative md:flex">
 					<Link
 						className={cn(
 							'h3 md:h2 inline-block',
@@ -42,16 +41,16 @@ export default async function Header() {
 					</Link>
 				</div>
 
-				<div className="navigation flex flex-col gap-6">
+				<div className="navigation flex flex-col">
 					{headerMenu?.items?.map(
 						(item, key) =>
 							item._type === 'link' && (
 								<CTA
 									link={item}
-									className="link-list flex flex-col rounded-md p-4 pl-0 pr-8 transition-all duration-300 ease-in-out hover:bg-neutral-100 hover:pl-4 hover:pr-4"
+									className="link-list flex flex-col rounded-md p-2 pl-0 pr-8 transition-all duration-300 ease-in-out hover:bg-neutral-100 hover:pl-4 hover:pr-4 md:p-4"
 									key={key}
 								>
-									<div className="pb-4 text-2xl font-bold">
+									<div className="text-2xl font-bold uppercase md:pb-4 md:text-4xl">
 										{item.label} {/* Assuming the title is in `item.title` */}
 									</div>
 									<PortableText value={item.content} />
@@ -59,8 +58,6 @@ export default async function Header() {
 							),
 					)}
 				</div>
-
-				<Toggle />
 			</div>
 		</Wrapper>
 	)

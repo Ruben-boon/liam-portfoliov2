@@ -14,11 +14,11 @@ export default async function Post({ post }: { post: Sanity.BlogPost }) {
 	return (
 		<>
 			<article>
-				<header className="section space-y-6 pb-5 pt-20 text-center">
+				<header className="section space-y-6 p-5 pt-20 text-center">
 					<h1 className="h1 text-balance">{post.metadata.title}</h1>
 				</header>
 
-				<div className="section grid gap-8 lg:grid-cols-[1fr,auto]">
+				<div className="section grid gap-8 p-5 lg:grid-cols-[1fr,auto]">
 					<Content
 						value={post.body}
 						className={cn(css.body, 'grid max-w-screen-md')}
@@ -26,8 +26,8 @@ export default async function Post({ post }: { post: Sanity.BlogPost }) {
 						<hr />
 					</Content>
 				</div>
-				<div className="p-4">
-					<Img image={post.metadata.image} />
+				<div className="p-8">
+					<Img className="w-full" image={post.image} />
 				</div>
 			</article>
 		</>

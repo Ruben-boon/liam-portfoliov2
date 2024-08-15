@@ -38,7 +38,7 @@ export default function List({
 	}
 
 	return (
-		<div className="grid w-full grid-cols-1 md:grid-cols-2">
+		<div className="mb-[160px] grid w-full grid-cols-1 md:grid-cols-2">
 			{filtered?.map((post) => (
 				<div key={post._id}>
 					<PostPreview post={post} />

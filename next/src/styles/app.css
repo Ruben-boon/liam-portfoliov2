@@ -308,3 +308,64 @@
 		--y: -1rem;
 	}
 }
+
+:root {
+	--light-background: #ffffff;
+	--dark-background: #000000;
+}
+
+.logo-wrapper {
+	background: var(--light-background);
+}
+
+.logo-container {
+	position: relative;
+}
+
+.logo-normal,
+.logo-inverted {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: opacity 0.3s ease;
+}
+
+.logo-normal {
+	opacity: 1;
+}
+
+.logo-inverted {
+	opacity: 0;
+	filter: invert(1);
+}
+
+@media (prefers-color-scheme: dark) {
+	.logo-wrapper {
+		background: var(--dark-background);
+	}
+
+	.logo-normal {
+		opacity: 0;
+	}
+
+	.logo-inverted {
+		opacity: 1;
+	}
+}
+
+/* For sections with light/dark backgrounds */
+.light-bg .logo-normal {
+	opacity: 1;
+}
+
+.light-bg .logo-inverted {
+	opacity: 0;
+}
+
+.dark-bg .logo-normal {
+	opacity: 0;
+}
+
+.dark-bg .logo-inverted {
+	opacity: 1;
+}

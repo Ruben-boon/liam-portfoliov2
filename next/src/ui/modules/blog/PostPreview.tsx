@@ -7,13 +7,13 @@ import Categories from './Categories'
 export default function PostPreview({ post }: { post: Sanity.BlogPost }) {
 	return (
 		<Link
-			className="space-y- group block h-[400px] overflow-hidden"
+			className="space-y- h:280 group block overflow-hidden md:h-[480px]"
 			href={processUrl(post, { base: false })}
 		>
 			<figure className="aspect-video h-full overflow-hidden bg-ink/5 object-cover">
 				<Img
 					className="aspect-video w-full object-cover transition-[filter,transform] group-hover:scale-105 group-hover:brightness-110"
-					image={post.metadata.image}
+					image={post.image}
 					imageWidth={800}
 				/>
 			</figure>

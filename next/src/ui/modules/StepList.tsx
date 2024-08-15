@@ -10,7 +10,7 @@ export default function StepList({
 	}[]
 }>) {
 	return (
-		<section className="section space-y-8">
+		<section className="section space-y-8 p-8">
 			{intro && (
 				<header className="section richtext space-y-6 pb-5 pt-20 text-center">
 					<PortableText value={intro} />
