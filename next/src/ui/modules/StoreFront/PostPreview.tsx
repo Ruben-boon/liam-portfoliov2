@@ -10,7 +10,7 @@ export default function PostPreview({ post }: { post: Sanity.BlogPost }) {
 	return (
 		<Link
 			className="space-y- h:280 group block overflow-hidden md:h-[320px]"
-			href={processUrl(post, { base: false })}
+			href={`store/${processUrl(post, { base: false })}`}
 		>
 			<figure className="h-full w-full overflow-hidden bg-ink/5 object-cover">
 				<Img

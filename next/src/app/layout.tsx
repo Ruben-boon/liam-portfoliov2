@@ -31,7 +31,11 @@ export default async function RootLayout({
 				<div className="flex w-full flex-col lg:flex-row">
 					{/* <SkipToContent /> */}
 					{/* <Announcement /> */}
-					<main id="main-content" tabIndex={-1} className="md:w-[69%]">
+					<main
+						id="main-content"
+						tabIndex={-1}
+						className="mb-[2px] min-h-[100dvh] md:w-[69%]"
+					>
 						{/* <PageTransition>{children}</PageTransition>
 						 */}
 						{children}
