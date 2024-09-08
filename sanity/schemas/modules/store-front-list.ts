@@ -1,11 +1,11 @@
 import { defineField, defineType } from 'sanity'
-import { VscEdit } from 'react-icons/vsc'
+import { VscTag } from 'react-icons/vsc'
 import { getBlockText } from '../../src/utils'
 
 export default defineType({
-	name: 'blog-list',
-	title: 'Blog list',
-	icon: VscEdit,
+	name: 'store-front-list',
+	title: 'Storefront list',
+	icon: VscTag,
 	type: 'object',
 	groups: [
 		{ name: 'content', default: true },
@@ -62,7 +62,7 @@ export default defineType({
 		},
 		prepare: ({ intro }) => ({
 			title: getBlockText(intro),
-			subtitle: 'Blog list',
+			subtitle: 'Storefront list',
 		}),
 	},
 })

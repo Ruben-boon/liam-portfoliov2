@@ -15,6 +15,7 @@ import StatList from './StatList'
 import StepList from './StepList'
 import TestimonialList from './TestimonialList'
 import TestimonialFeatured from './TestimonialFeatured'
+import StoreFrontList from './StoreFront/storeFrontList'
 
 export default function Modules({
 	modules,
@@ -31,6 +32,8 @@ export default function Modules({
 						return <AccordionList {...module} key={module._key} />
 					case 'blog-list':
 						return <BlogList {...module} key={module._key} />
+					case 'store-front-list':
+						return <StoreFrontList {...module} key={module._key} />
 					case 'breadcrumbs':
 						return (
 							<Breadcrumbs {...module} currentPage={page} key={module._key} />

@@ -37,7 +37,8 @@ async function getPost(params: Props['params']) {
 			metadata {
 				...,
 				'ogimage': image.asset->url
-			}
+			},
+			'projectImage': projectImage
 		}`,
 		{
 			params,

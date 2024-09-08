@@ -1,11 +1,11 @@
 import { defineArrayMember, defineField, defineType } from 'sanity'
-import { VscEdit } from 'react-icons/vsc'
+import { VscTag } from 'react-icons/vsc'
 import imageBlock from '../fragments/image-block'
 
 export default defineType({
-	name: 'blog.post',
-	title: 'Projects',
-	icon: VscEdit,
+	name: 'store.items',
+	title: 'Store items',
+	icon: VscTag,
 	type: 'document',
 	fields: [
 		defineField({
@@ -22,25 +22,14 @@ export default defineType({
 				}),
 			],
 		}),
-
 		defineField({
 			name: 'projectImage',
-			title: 'Project image',
+			title: 'Product image',
 			type: 'image',
 			options: {
 				hotspot: true,
 			},
 		}),
-		// defineField({
-		// 	name: 'categories',
-		// 	type: 'array',
-		// 	of: [
-		// 		{
-		// 			type: 'reference',
-		// 			to: [{ type: 'blog.category' }],
-		// 		},
-		// 	],
-		// }),
 		defineField({
 			name: 'publishDate',
 			type: 'date',

@@ -47,10 +47,10 @@ export default async function Header() {
 							item._type === 'link' && (
 								<CTA
 									link={item}
-									className="link-list flex flex-col rounded-md p-2 pl-0 pr-8 transition-all duration-300 ease-in-out hover:bg-neutral-100 hover:pl-4 hover:pr-4 md:p-4"
+									className="link-list flex flex-col p-2 pl-0 pr-8 transition-all duration-700 ease-in-out hover:bg-black hover:pl-4 hover:pr-4 hover:text-white md:p-4"
 									key={key}
 								>
-									<div className="text-2xl font-bold uppercase md:pb-4 md:text-4xl">
+									<div className="text-xl font-light capitalize md:text-2xl">
 										{item.label} {/* Assuming the title is in `item.title` */}
 									</div>
 									<PortableText value={item.content} />

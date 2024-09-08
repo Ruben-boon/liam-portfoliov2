@@ -2,7 +2,7 @@
 import site from './documents/site'
 import page from './documents/page'
 import blogPost from './documents/blog.post'
-import blogCategory from './documents/blog.category'
+// import blogCategory from './documents/blog.category'
 import navigation from './documents/navigation'
 import announcement from './documents/announcement'
 import redirect from './documents/redirect'
@@ -35,13 +35,16 @@ import statList from './modules/stat-list'
 import stepList from './modules/step-list'
 import testimonialFeatured from './modules/testimonial.featured'
 import testimonialList from './modules/testimonial-list'
+import storeItems from './documents/store.items'
+import storeFrontList from './modules/store-front-list'
 
 export const schemaTypes = [
 	// documents
 	site,
 	page,
 	blogPost,
-	blogCategory,
+	storeItems,
+	// blogCategory,
 	navigation,
 	announcement,
 	redirect,
@@ -58,7 +61,9 @@ export const schemaTypes = [
 
 	// modules
 	accordionList,
+
 	blogList,
+	storeFrontList,
 	breadcrumbs,
 	callout,
 	creativeModule,
