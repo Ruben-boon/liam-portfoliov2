@@ -18,7 +18,7 @@ export default async function Header() {
 			<div
 				className={cn(
 					css.header,
-					'mb-8 flex h-full flex-col justify-between p-8 pb-[env(safe-area-inset-bottom)]', // Adjust the number of columns as needed
+					'mb-10 flex h-full flex-col justify-between p-8', // Adjust the number of columns as needed
 				)}
 			>
 				<div className="z- fixed right-4 top-2 justify-end md:relative md:flex">
