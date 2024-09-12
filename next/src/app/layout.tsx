@@ -34,7 +34,7 @@ export default async function RootLayout({
 					<main
 						id="main-content"
 						tabIndex={-1}
-						className="mb-[2px] min-h-[100dvh] md:w-[69%]"
+						className="mb-32 min-h-[100dvh] md:mb-[2px] md:w-[69%]"
 					>
 						{/* <PageTransition>{children}</PageTransition>
 						 */}
