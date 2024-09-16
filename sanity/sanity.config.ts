@@ -18,24 +18,14 @@ const singletonTypes = ['site']
 
 export default defineConfig({
 	name: 'default',
-	title: 'SanityPress',
-
+	title: 'liam backend',
 	projectId,
 	dataset: 'production',
-
 	plugins: [
 		structureTool({
 			title: 'Content',
 			defaultDocumentNode,
 			structure,
-		}),
-		presentationTool({
-			title: 'Editor',
-			previewUrl: {
-				draftMode: {
-					enable: `${BASE_URL}/api/draft`,
-				},
-			},
 		}),
 		// dashboardTool({
 		// 	title: 'Deployment',
