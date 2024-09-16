@@ -14,11 +14,11 @@ export default async function Header() {
 	const logoImage = logo?.image?.dark || logo?.image?.default
 
 	return (
-		<Wrapper className="fixed bottom-0 z-10 h-fit w-1/2 bg-canvas header-closed:hidden max-md:header-open:shadow-lg md:top-0 md:h-screen md:w-[30%] md:w-full lg:sticky">
+		<Wrapper className="fixed bottom-0 z-10 h-fit w-2/5 bg-canvas header-closed:hidden max-md:header-open:shadow-lg md:top-0 md:h-screen md:w-[30%] lg:sticky">
 			<div
 				className={cn(
 					css.header,
-					'mb-32 flex h-full flex-col justify-between p-8', // Adjust the number of columns as needed
+					'mb-32 flex h-full flex-col justify-between p-4 md:p-6',
 				)}
 			>
 				<div className="z- fixed right-4 top-2 justify-end md:relative md:flex">
